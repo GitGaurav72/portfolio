@@ -1,0 +1,54 @@
+<div class="projects-container">
+  <div class="sidebar">
+    <h2 class="sidebar-title">//projects</h2>
+    <div class="project-list">
+      <div *ngFor="let project of projects" 
+           class="project-item"
+           [class.active]="project === selectedProject"
+           (click)="selectProject(project)">
+        <span class="project-icon">➜</span>
+        {{project.name}}
+      </div>
+    </div>
+  </div>
+
+  <div class="project-details">
+    <div class="project-header">
+      <h1>{{selectedProject.role}}</h1>
+      <div class="project-period">{{selectedProject.period}}</div>
+      <div class="project-location">{{selectedProject.location}}</div>
+    </div>
+
+    <div class="content-section">
+      <h2>Project Intro</h2>
+      <p>{{selectedProject.description}}</p>
+    </div>
+
+    <div class="tech-stack">
+      <div class="stack-section">
+        <h3>Languages</h3>
+        <div class="tech-list">
+          <span *ngFor="let lang of selectedProject.languages">{{lang}}</span>
+        </div>
+      </div>
+
+      <div class="stack-section">
+        <h3>Tools</h3>
+        <div class="tech-list">
+          <span *ngFor="let tool of selectedProject.tools">{{tool}}</span>
+        </div>
+      </div>
+
+      <div class="stack-section">
+        <h3>Frameworks</h3>
+        <div class="tech-list">
+          <span *ngFor="let framework of selectedProject.frameworks">{{framework}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="visit-link">
+      <a href="#" target="_blank">_visit_link ➜</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<app-particle-bg></app-particle-bg>
+<div class="home-container">
+
+  <main class="main-content">
+    <div class="intro-section">
+      <div class="greeting">Hello! I am</div>
+      <h1 class="name-large">
+        {{displayName}}<span class="cursor">|</span>
+      </h1>
+      <div class="title">{{title}}</div>
+      <p class="description">{{experience}}</p>
+    </div>
+
+    <div class="featured-work">
+      <div class="project-card">
+        <div class="project-header">
+          <h3>{{featuredProject.title}}</h3>
+          <span class="period">{{featuredProject.period}}</span>
+        </div>
+        <div class="project-image">
+          <img src="assets/images/featured-project.jpg" [alt]="featuredProject.title">
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,133 @@
+.contact-container {
+  display: flex;
+  min-height: 100vh;
+  background: #1E1E1E;
+  color: #FFFFFF;
+  
+}
+
+.contact-sidebar {
+  width: 300px;
+  background: #141414;
+  padding: 4rem 2rem;
+  border-right: 1px solid #333;
+
+  h2 {
+    color: #64FFDA;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .sidebar-intro {
+    color: #8B8B8B;
+    line-height: 1.6;
+  }
+}
+
+.contact-content {
+  flex: 1;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.contact-form {
+  max-width: 600px;
+
+  .form-group {
+    margin-bottom: 2rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #8B8B8B;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid #333;
+      border-radius: 4px;
+      color: #FFFFFF;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+
+      &:focus {
+        outline: none;
+        border-color: #64FFDA;
+        background: rgba(100, 255, 218, 0.05);
+      }
+    }
+  }
+
+  .submit-btn {
+    background: #64FFDA;
+    color: #1E1E1E;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #FFFFFF;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.thank-you-section {
+  text-align: center;
+  padding: 4rem 0;
+  border-top: 1px solid #333;
+
+  h3 {
+    color: #64FFDA;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    color: #8B8B8B;
+    margin-bottom: 2rem;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+    a {
+      color: #FFFFFF;
+      font-size: 1.5rem;
+      opacity: 0.7;
+      transition: all 0.3s ease;
+
+      &:hover {
+        color: #64FFDA;
+        opacity: 1;
+        transform: translateY(-3px);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #333;
+    padding: 2rem;
+  }
+
+  .contact-content {
+    padding: 2rem;
+  }
+}

@@ -1,0 +1,126 @@
+.skills-container {
+  display: flex;
+  min-height: 100vh;
+  background: #1E1E1E;
+  color: #FFFFFF;
+  
+}
+
+.skills-sidebar {
+  width: 300px;
+  background: #141414;
+  padding: 4rem 2rem;
+  border-right: 1px solid #333;
+
+  h2 {
+    color: #64FFDA;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .sidebar-intro {
+    color: #8B8B8B;
+    line-height: 1.6;
+  }
+}
+
+.skills-content {
+  flex: 1;
+  padding: 4rem;
+
+  .skill-category {
+    margin-bottom: 4rem;
+
+    h3 {
+      color: #8B8B8B;
+      margin-bottom: 2rem;
+      font-size: 1.2rem;
+      position: relative;
+      padding-left: 1rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 100%;
+        background: #64FFDA;
+      }
+    }
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+  }
+
+  .skill-item {
+    text-align: center;
+
+    .skill-circle {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      margin: 0 auto 1rem;
+
+      svg {
+        transform: rotate(-90deg);
+        
+        path:nth-child(1) {
+          stroke-linecap: round;
+        }
+        
+        path:nth-child(2) {
+          stroke-linecap: round;
+          transition: stroke-dasharray 0.5s ease;
+        }
+      }
+
+      .percentage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 1.2rem;
+        color: #64FFDA;
+      }
+    }
+
+    .skill-name {
+      color: #FFFFFF;
+      font-size: 0.9rem;
+    }
+
+    &:hover {
+      .skill-circle {
+        svg path:nth-child(2) {
+          stroke: #FFFFFF;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+  }
+
+  .skills-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #333;
+    padding: 2rem;
+  }
+
+  .skills-content {
+    padding: 2rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+  }
+}

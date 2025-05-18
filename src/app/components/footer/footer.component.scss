@@ -1,0 +1,82 @@
+:host {
+  flex-shrink: 0;
+}
+
+.companies-footer {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background: #1E1E1E;
+
+  .company-list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+
+    .company-item {
+      color: #FFFFFF;
+      opacity: 0.5;
+      font-size: 0.9rem;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .social-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+
+      a {
+        color: #FFFFFF;
+        opacity: 0.7;
+        text-decoration: none;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
+
+    .news-ticker {
+      display: flex;
+      gap: 2rem;
+      color: #FFFFFF;
+      opacity: 0.7;
+      font-size: 0.9rem;
+
+      span {
+        position: relative;
+        padding-right: 2rem;
+
+        &:after {
+          content: '⟶';
+          position: absolute;
+          right: 0;
+        }
+
+        &:last-child:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .news-ticker {
+    display: none !important;
+  }
+}

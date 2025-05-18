@@ -1,0 +1,35 @@
+<div class="skills-container">
+  <div class="skills-sidebar">
+    <h2>//technical_skills</h2>
+    <p class="sidebar-intro">Core competencies and technical expertise</p>
+  </div>
+
+  <div class="skills-content">
+    <div class="skill-category" *ngFor="let category of skillCategories">
+      <h3>{{category.name}}</h3>
+      <div class="skills-grid">
+        <div class="skill-item" *ngFor="let skill of category.skills">
+          <div class="skill-circle">
+            <svg viewBox="0 0 36 36">
+              <path d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+                fill="none"
+                stroke="#444"
+                stroke-width="2" />
+              <path d="M18 2.0845
+                a 15.9155 15.9155 0 0 1 0 31.831
+                a 15.9155 15.9155 0 0 1 0 -31.831"
+                fill="none"
+                stroke="#64FFDA"
+                stroke-width="2"
+                [attr.stroke-dasharray]="skill.percentage + ', 100'" />
+            </svg>
+            <div class="percentage">{{skill.percentage}}%</div>
+          </div>
+          <div class="skill-name">{{skill.name}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
