@@ -6,7 +6,7 @@ import { AvatarComponent } from '../avatar/avatar.component';
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [CommonModule, RouterModule, AvatarComponent],
+  imports: [CommonModule, RouterModule,AvatarComponent],
   templateUrl: './nav.component.html',
   styleUrls: ['./nav.component.scss']
 })

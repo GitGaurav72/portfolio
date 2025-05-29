@@ -12,13 +12,20 @@
     </div>
 
     <div class="featured-work">
-      <div class="project-card">
-        <div class="project-header">
-          <h3>{{featuredProject.title}}</h3>
-          <span class="period">{{featuredProject.period}}</span>
-        </div>
-        <div class="project-image">
-          <img src="assets/images/featured-project.jpg" [alt]="featuredProject.title">
+      <div class="cube-container">
+        <div class="cube" [style.transform]="'rotateY(' + cubeRotation + 'deg)'">
+          <div class="cube-face front" *ngFor="let project of projects; let i = index"
+               [style.transform]="'rotateY(' + (i * 120) + 'deg) translateZ(300px)'">
+            <div class="project-card">
+              <div class="project-header">
+                <h3>{{project.name}}</h3>
+              </div>
+              <div class="project-image">
+                <img [src]="project.imageUrl" [alt]="project.name">
+              </div>
+              <p class="project-description">{{project.description}}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>

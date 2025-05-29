@@ -10,8 +10,10 @@
 }
 
 .main-content {
-  flex: 1 0 auto;
-  margin-top: 60px;
-  width: 100%;
-  padding: 0;
+  min-height: calc(100vh - 60px); // Subtract navbar height
+  margin-top: 0;
+  padding-top: 0;
+  position: relative;
+  z-index: 1;
+  background: transparent;
 }

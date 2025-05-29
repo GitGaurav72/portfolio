@@ -32,8 +32,41 @@ export class HomeComponent implements OnInit {
     // image: '/assets/images/featured-project.jpg'  // Add image path here
   };
 
+  projects = [
+    {
+      name: 'ExpensoHub',
+      description: 'A comprehensive expense tracking and budgeting application',
+      imageUrl: '../../../../assets/images/ExpensoHub.png'
+    },
+    {
+      name: 'ChatZap',
+      description: 'Real-time messaging platform with modern features',
+      imageUrl: 'assets/images/ChatZap.png'
+    },
+    {
+      name: 'EmailPilot',
+      description: 'Smart email automation and management system',
+      imageUrl: 'assets/images/EmailPilot.png'
+    }
+  ];
+
+  currentProjectIndex = 0;
+  cubeRotation = 0;
+
   ngOnInit() {
     this.animateName();
+    this.rotateCube();
+  }
+
+  private rotateCube() {
+    setInterval(() => {
+      this.cubeRotation = (this.cubeRotation + 120) % 360;
+    }, 3000);
+  }
+  private startProjectSlideshow() {
+    setInterval(() => {
+      this.currentProjectIndex = (this.currentProjectIndex + 1) % this.projects.length;
+    }, 3000); // Change slide every 3 seconds
   }
 
   private animateName() {
