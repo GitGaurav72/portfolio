@@ -12,8 +12,8 @@ import { ParticleBgComponent } from '../../components/particle-bg/particle-bg.co
 export class HomeComponent implements OnInit {
   fullName = 'Gaurav Kumar';
   displayName = 'Gaurav Kumar';
-  title = 'Professional Web3/Blockchain Developer - Play2Earn Games';
-  experience = '12 years being a professional tech/engineer (10 years in tech leadership), transitioned from a Distributed Computing (VoIP) Engineer to a Decentralized/Blockchain Leader with the ability to recruit the finest engineering talent from all over the world.';
+  title = 'Fintech Full-Stack Architect | Java & Angular Specialist | Digital Payment Solutions Engineer';
+  experience = 'Passionate Full-Stack Developer crafting seamless financial experiences at Paynways, where I bridge the gap between innovative payment solutions and robust enterprise architecture. With 1.5 years of hands-on expertise in Java and Angular, I specialize in building secure, scalable fintech applications that transform complex financial workflows into intuitive user experiences.';
   
   companies = [
     'Google',

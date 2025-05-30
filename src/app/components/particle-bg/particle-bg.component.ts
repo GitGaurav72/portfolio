@@ -98,7 +98,7 @@ class Particle {
   draw(ctx: CanvasRenderingContext2D) {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fillStyle = '#64FFDA';
+    ctx.fillStyle = '#f2f2f2';
     ctx.fill();
   }
 }
