@@ -1,0 +1,144 @@
+.experience-container {
+  display: flex;
+  min-height: 100vh;
+  background: #242424;
+  color: #FFFFFF;
+}
+
+.sidebar {
+  width: 300px;
+  background: #141414;
+  padding: 4rem 2rem;
+  border-right: 1px solid #333;
+  position: sticky;
+  top: 0;
+  min-height: 100vh; // Add this to ensure full height
+  display: flex; // Add this
+  flex-direction: column; // Add this
+  overflow-y: auto;
+
+  h2 {
+    color: #64FFDA;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .sidebar-intro {
+    color: #8B8B8B;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  .resume-link {
+    color: #64FFDA;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &::after {
+      content: '↗';
+      font-size: 1.2em;
+    }
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 4rem;
+  min-height: 100vh; // Add this to match sidebar height
+  position: relative;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.experience-item, .education-item {
+  display: flex;
+  gap: 2rem;
+
+  .period {
+    flex: 0 0 200px;
+    color: #8B8B8B;
+    font-family: monospace;
+  }
+
+  .details {
+    flex: 1;
+
+    h4 {
+      color: #FFFFFF;
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      .external-link {
+        color: #64FFDA;
+        font-size: 1.2em;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      &:hover .external-link {
+        opacity: 1;
+      }
+    }
+
+    .roles {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+
+      .role {
+        color: #8B8B8B;
+        font-style: italic;
+      }
+    }
+
+    .description {
+      color: #8B8B8B;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+
+      .skill {
+        background: rgba(100, 255, 218, 0.1);
+        color: #64FFDA;
+        padding: 0.25rem 0.75rem;
+        border-radius: 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+.education-section {
+  margin-top: 4rem;
+
+  .education-item {
+    .institution {
+      color: #8B8B8B;
+    }
+  }
+}
+
+h3 {
+  color: #64FFDA;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+}

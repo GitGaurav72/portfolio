@@ -3,13 +3,20 @@
   min-height: 100vh;
   background: #1E1E1E;
   color: #FFFFFF;
+  position: relative;
 }
 
 .sidebar {
   width: 300px;
   background: #1A1A1A;
   border-right: 1px solid #333;
-  padding: 2rem 0;
+  padding: 4rem 2rem;
+  min-height: 100vh; // Change to min-height: 100vh
+  position: sticky;
+  top: 0;
+  overflow-y: auto;
+  display: flex; // Add this
+  flex-direction: column; // Add this
 
   .sidebar-title {
     padding: 0 2rem;
@@ -17,6 +24,12 @@
     color: #666;
     font-size: 1rem;
   }
+  h2 {
+    color: #64FFDA;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
 
   .project-list {
     .project-item {

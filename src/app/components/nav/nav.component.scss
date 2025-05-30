@@ -4,7 +4,7 @@
   align-items: center;
   padding: 1rem 2rem;
   background: transparent;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   position: sticky;
   top: 0;
   left: 0;
@@ -13,62 +13,62 @@
   height: 60px;
   box-shadow: 0 1px 15px rgba(255, 255, 255, 0.1),
               0 1px 5px rgba(255, 255, 255, 0.05);
-}
 
-.name {
-  color: #64FFDA;
-  text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
-}
-
-.nav-left {
   .name {
-    font-size: 1.2rem;
-    font-weight: 500;
+    color: #64FFDA;
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
   }
-}
 
-.nav-center {
-  display: flex;
-  gap: 0;
-
-  a {
-    color: #FFFFFF;
-    text-decoration: none;
-    padding: 0.5rem 1.5rem;
-    position: relative;
-    opacity: 0.7;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-    
-    &:not(:last-child)::after {
-      content: '';
-      position: absolute;
-      right: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      height: 60%;
-      width: 1px;
-      background: rgba(255, 255, 255, 0.1);
+  .nav-left {
+    .name {
+      font-size: 1.2rem;
+      font-weight: 500;
     }
+  }
 
-    &.active {
-      opacity: 1;
-      color: #64FFDA;
+  .nav-center {
+    display: flex;
+    gap: 0;
+
+    a {
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 0.5rem 1.5rem;
+      position: relative;
+      opacity: 0.7;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
       
-      &::before {
+      &:not(:last-child)::after {
         content: '';
         position: absolute;
-        bottom: -1px;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background: #64FFDA;
-        box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 60%;
+        width: 1px;
+        background: rgba(255, 255, 255, 0.1);
       }
-    }
 
-    &:hover {
-      opacity: 1;
-      color: #64FFDA;
+      &.active {
+        opacity: 1;
+        color: #64FFDA;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: #64FFDA;
+          box-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+        color: #64FFDA;
+      }
     }
   }
 }

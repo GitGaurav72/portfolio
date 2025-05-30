@@ -5,32 +5,32 @@
   </div>
 
   <div class="contact-content">
-    <div class="contact-form">
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="contact-form">
       <div class="form-group">
         <label>Name</label>
-        <input type="text" placeholder="John Doe">
+        <input type="text" name="name" [(ngModel)]="name" placeholder="John Doe" required>
       </div>
 
       <div class="form-group">
         <label>Email</label>
-        <input type="email" placeholder="john@example.com">
+        <input type="email" name="email" [(ngModel)]="email" placeholder="john@example.com" required email>
       </div>
 
       <div class="form-group">
         <label>Message</label>
-        <textarea rows="5" placeholder="Your message here..."></textarea>
+        <textarea name="message" [(ngModel)]="message" rows="5" placeholder="Your message here..." required></textarea>
       </div>
 
-      <button class="submit-btn">Send Message</button>
-    </div>
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
 
-    <div class="thank-you-section">
+    <div class="thank-you-section" *ngIf="submitted">
       <h3>Thank you for visiting!</h3>
       <p>Let's connect and discuss how we can work together.</p>
-      
+
       <div class="social-links">
-        <a *ngFor="let link of socialLinks" 
-           [href]="link.url" 
+        <a *ngFor="let link of socialLinks"
+           [href]="link.url"
            target="_blank"
            [attr.aria-label]="link.name">
           <i [class]="link.icon"></i>
